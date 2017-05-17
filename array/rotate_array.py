@@ -28,3 +28,11 @@ def reverse(array, a, b):
         array[a], array[b] = array[b], array[a]
         a += 1
         b -= 1
+
+
+def rotate_array(arr, steps):
+    steps = steps % len(arr)
+    return arr[-steps:] + arr[:-steps]
+
+
+print rotate_array(range(10), 12)
